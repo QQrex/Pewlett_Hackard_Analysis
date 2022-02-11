@@ -1,5 +1,4 @@
 -- Retirement Title table from 01-01-1952 to 12-31-1955
-
 SELECT e.emp_no,
 		e.first_name,
 		e.last_name,
@@ -37,7 +36,7 @@ INTO retiring_titles_count
 FROM unique_titles
 GROUP BY title
 
--- EXPORT Retiriement Title table count
+-- EXPORT Retirement Title table count
 COPY retiring_titles_count TO 'C:\Users\Public\Postgres_Exports\retiring_titles.csv' DELIMITER ',' CSV HEADER;
 
 
