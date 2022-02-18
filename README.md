@@ -21,7 +21,7 @@ First, we need to create a table of all retiring employees. We have determined t
 >
 >Line 8 - Use INTO to name our output table.
 >
->Line 9 - Use FROM to call employees table for our SELECT list of column emp_no, first_name and last_name. We are also abbreviating employees table as 'e'.
+>Line 9 - Use FROM to call employees table for our SELECT list of columns emp_no, first_name and last_name. We are also abbreviating employees table as 'e'.
 >
 >Line 10 - Use LEFT JOIN to merge employees table with titles table.
 >
@@ -31,13 +31,13 @@ First, we need to create a table of all retiring employees. We have determined t
 >
 >Line 13 - Use ORDE BY to short new table by emp_no.
 
-Next we will export our new table and also check some of the output.
+Next, we will export our new table and also check some of the output.
 
 ![ert](https://github.com/QQrex/Pewlett_Hackard_Analysis/blob/main/Resources/export%20retirement%20table.PNG)
 
 ![retirmentop](https://github.com/QQrex/Pewlett_Hackard_Analysis/blob/main/Resources/retirment%20output.PNG)
 
-After checking our new retirement titles table, we notice that there are duplicate employee numbers. Upon further investigation, we can see some employees have been promoted in the campany over the years in the titles table leading to duplicate employee numbers. To clean our data, we will have to use SELECT DISTINCT ON to return our new unique retirement table.
+After checking our new retirement titles table, we notice that there are duplicate employee numbers. Upon further investigation, we can see some employees have been promoted in the company over the years in the titles table leading to duplicate employee numbers. To clean our data, we will have to use SELECT DISTINCT ON to return our new unique retirement table.
 
 ![ut](https://github.com/QQrex/Pewlett_Hackard_Analysis/blob/main/Resources/unique%20title.PNG)
 > In this block of code, we are returning a single unique row based on the employee number.
@@ -73,3 +73,4 @@ After our tables are merge, we will check and export our new table.
 
 ## Summary
 
+In summary we found the number of employees in each depart that are retiring soon and a full list of each employee eligible for the company mentorship program. To better analysis our list of employees eligible for the mentorship program, we could also sort and count the list by department. We may also want to consider only senior staff for the mentorship program so we can sort and count our list by title as well.
